@@ -1,0 +1,244 @@
+[
+{
+  "model": "catalogo.desenvolvedora",
+  "pk": 1,
+  "fields": {
+    "nome": "Nintendo"
+  }
+},
+{
+  "model": "catalogo.desenvolvedora",
+  "pk": 2,
+  "fields": {
+    "nome": "Insomniac Games"
+  }
+},
+{
+  "model": "catalogo.desenvolvedora",
+  "pk": 3,
+  "fields": {
+    "nome": "FromSoftware"
+  }
+},
+{
+  "model": "catalogo.plataforma",
+  "pk": 1,
+  "fields": {
+    "nome": "Nintendo Switch"
+  }
+},
+{
+  "model": "catalogo.plataforma",
+  "pk": 2,
+  "fields": {
+    "nome": "PlayStation 5"
+  }
+},
+{
+  "model": "catalogo.plataforma",
+  "pk": 3,
+  "fields": {
+    "nome": "PC"
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 1,
+  "fields": {
+    "nome": "The Legend of Zelda: Breath of the Wild",
+    "ano_lancamento": 2017,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 2,
+  "fields": {
+    "nome": "Super Mario Odyssey",
+    "ano_lancamento": 2017,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 3,
+  "fields": {
+    "nome": "Animal Crossing: New Horizons",
+    "ano_lancamento": 2020,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 4,
+  "fields": {
+    "nome": "Splatoon 3",
+    "ano_lancamento": 2022,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 5,
+  "fields": {
+    "nome": "Pikmin 4",
+    "ano_lancamento": 2023,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 6,
+  "fields": {
+    "nome": "Mario Kart 8 Deluxe",
+    "ano_lancamento": 2017,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 7,
+  "fields": {
+    "nome": "Marvel's Spider-Man 2",
+    "ano_lancamento": 2023,
+    "desenvolvedora": 2,
+    "plataforma": 2
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 8,
+  "fields": {
+    "nome": "Ratchet & Clank: Rift Apart",
+    "ano_lancamento": 2021,
+    "desenvolvedora": 2,
+    "plataforma": 2
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 9,
+  "fields": {
+    "nome": "Marvel's Spider-Man: Miles Morales",
+    "ano_lancamento": 2020,
+    "desenvolvedora": 2,
+    "plataforma": 2
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 10,
+  "fields": {
+    "nome": "Elden Ring",
+    "ano_lancamento": 2022,
+    "desenvolvedora": 3,
+    "plataforma": 3
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 11,
+  "fields": {
+    "nome": "Dark Souls III",
+    "ano_lancamento": 2016,
+    "desenvolvedora": 3,
+    "plataforma": 3
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 12,
+  "fields": {
+    "nome": "Sekiro: Shadows Die Twice",
+    "ano_lancamento": 2019,
+    "desenvolvedora": 3,
+    "plataforma": 3
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 13,
+  "fields": {
+    "nome": "Donkey Kong Country",
+    "ano_lancamento": 2025,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 14,
+  "fields": {
+    "nome": "Super Mario Party",
+    "ano_lancamento": 2024,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 15,
+  "fields": {
+    "nome": "Luigi's Mansion",
+    "ano_lancamento": 2024,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 16,
+  "fields": {
+    "nome": "Emio – The Smiling Man: Famicom Detective Club",
+    "ano_lancamento": 2024,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 17,
+  "fields": {
+    "nome": "Princess Peach™: Showtime!",
+    "ano_lancamento": 2024,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 18,
+  "fields": {
+    "nome": "OCTOPATH TRAVELER II",
+    "ano_lancamento": 2023,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 19,
+  "fields": {
+    "nome": "Kirby’s Dream Buffet™",
+    "ano_lancamento": 2022,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+},
+{
+  "model": "catalogo.jogo",
+  "pk": 20,
+  "fields": {
+    "nome": "Disney Illusion Island",
+    "ano_lancamento": 2022,
+    "desenvolvedora": 1,
+    "plataforma": 1
+  }
+}
+]
