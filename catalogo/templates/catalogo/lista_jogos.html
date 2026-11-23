@@ -1,0 +1,11 @@
+<h1>Teste</h1>
+<form method="get">
+  <input name="busca" value="{{ busca }}">
+  <button>Buscar</button>
+</form>
+
+{% for jogo in page_obj %}
+  <p>{{ jogo.nome }} - {{ jogo.desenvolvedora }} - {{ jogo.plataforma }}</p>
+{% endfor %}
+
+<p>Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</p>
