@@ -1,11 +1,142 @@
-<h1>Teste</h1>
-<form method="get">
-  <input name="busca" value="{{ busca }}">
-  <button>Buscar</button>
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'catalogo/css/estilo.css' %}">
+    <title>Catálogo de Jogos</title>
+</head>
 
-{% for jogo in page_obj %}
-  <p>{{ jogo.nome }} - {{ jogo.desenvolvedora }} - {{ jogo.plataforma }}</p>
-{% endfor %}
+<body>
 
-<p>Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</p>
+  <header>
+    <h1>Catálogo de Jogos</h1>
+  </header>
+  <main class="container">
+
+    <form method="GET">
+
+        <!-- Pesquisa textual -->
+        <input
+            type="text"
+            name="busca"
+            placeholder="Pesquisar jogo..."
+            value="{{ busca }}"
+        >
+
+        <!-- Filtro de desenvolvedora -->
+        <select name="desenvolvedora">
+
+            <option value="">Todas as desenvolvedoras</option>
+
+            {% for desenvolvedora in desenvolvedoras %}
+
+                <option
+                    value="{{ desenvolvedora.id }}"
+                    {% if desenvolvedora_sel == desenvolvedora.id|stringformat:"s" %}
+                        selected
+                    {% endif %}
+                >
+                    {{ desenvolvedora.nome }}
+                </option>
+
+            {% endfor %}
+
+        </select>
+
+        <!-- Filtro de plataforma -->
+        <select name="plataforma">
+
+            <option value="">Todas as plataformas</option>
+
+            {% for plataforma in plataformas %}
+
+                <option
+                    value="{{ plataforma.id }}"
+                    {% if plataforma_sel == plataforma.id|stringformat:"s" %}
+                        selected
+                    {% endif %}
+                >
+                    {{ plataforma.nome }}
+                </option>
+
+            {% endfor %}
+
+        </select>
+
+        <button type="submit">Pesquisar</button>
+
+        <a href="{% url 'lista_jogos' %}">Limpar filtros</a>
+
+    </form>
+
+
+    <hr>
+
+    <!-- Listagem dos jogos -->
+    <h2>Jogos disponíveis</h2>
+
+    <div class="jogos-lista">
+
+        {% for jogo in page_obj %}
+
+            <div class="jogo-card">
+
+                <h3>{{ jogo.nome }}</h3>
+
+                <p>
+                    <strong>Ano:</strong>
+                    {{ jogo.ano_lancamento }}
+                </p>
+
+                <p>
+                    <strong>Desenvolvedora:</strong>
+                    {{ jogo.desenvolvedora.nome }}
+                </p>
+
+                <p>
+                    <strong>Plataforma:</strong>
+                    {{ jogo.plataforma.nome }}
+                </p>
+
+            </div>
+
+        {% empty %}
+
+            <p class="sem-resultados">
+                Nenhum jogo encontrado.
+            </p>
+
+        {% endfor %}
+
+    </div>
+
+    <!-- Paginação -->
+    <div class="paginacao">
+
+        {% if page_obj.has_previous %}
+
+            <a href="?{{ query_string }}&page={{ page_obj.previous_page_number }}">
+                Anterior
+            </a>
+
+        {% endif %}
+
+        <span>
+            Página {{ page_obj.number }}
+            de {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+
+            <a href="?{{ query_string }}&page={{ page_obj.next_page_number }}">
+                Próxima
+            </a>
+
+        {% endif %}
+
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,108 @@
+# 🎮 Catálogo de Jogos
+
+## 1. Integrantes
+
+- Valentina Marques
+- Isabela Maia
+
+## 2. Tema escolhido
+
+**Catálogo de Jogos**
+
+O projeto consiste no desenvolvimento de uma aplicação web para consulta de jogos, utilizando Python e Django. A aplicação permite visualizar os jogos cadastrados, realizar pesquisas por nome, aplicar filtros e navegar pelos resultados através de paginação.
+
+## 3. Tecnologias utilizadas
+
+- Python
+- Django
+- SQLite
+- HTML5
+- CSS3
+
+## 4. Funcionalidades implementadas
+
+### Listagem de jogos
+Apresenta os jogos cadastrados no banco de dados, exibindo nome, ano de lançamento, desenvolvedora e plataforma.
+
+### Pesquisa textual
+Permite localizar jogos pelo nome, utilizando o método `icontains` do ORM do Django, possibilitando pesquisas sem diferenciar letras maiúsculas e minúsculas.
+
+### Filtros dinâmicos
+Foram implementados dois filtros utilizando campos de seleção (`select`):
+
+- **Desenvolvedora:** permite filtrar os jogos de acordo com sua desenvolvedora.
+- **Plataforma:** permite filtrar os jogos de acordo com a plataforma disponível.
+
+Os filtros utilizam o método GET e podem ser utilizados individualmente ou combinados entre si e com a pesquisa textual.
+
+### Paginação
+A aplicação utiliza a classe `Paginator` do Django para organizar os resultados em páginas de cinco registros.
+
+A navegação permite acessar as páginas anterior e seguinte, além de apresentar a página atual e o total de páginas.
+
+### Preservação dos filtros
+Os parâmetros da pesquisa textual e dos filtros selecionados são preservados durante a navegação entre as páginas.
+
+## 5. Como executar o projeto
+
+Clone o repositório:
+
+```bash
+git clone URL_DO_REPOSITORIO
+```
+
+Acesse a pasta do projeto:
+
+```bash
+cd atvjogos
+```
+
+Crie um ambiente virtual:
+
+```bash
+python -m venv venv
+```
+
+Ative o ambiente virtual no Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+Execute as migrações:
+
+```bash
+python manage.py migrate
+```
+
+Carregue os dados iniciais:
+
+```bash
+python manage.py loaddata dados
+```
+
+Inicie o servidor:
+
+```bash
+python manage.py runserver
+```
+
+## 6. Capturas de tela
+
+### Listagem dos jogos
+
+![alt text](docs\image.png)
+
+### Pesquisa e filtros
+
+![alt text](docs\image-1.png)
+
+### Paginação
+
+![alt text](docs\image-2.png)
